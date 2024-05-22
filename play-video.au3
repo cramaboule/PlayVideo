@@ -33,7 +33,7 @@
 #include <File.au3>
 #include 'MultiLang.au3'
 
-$head = ' V1.1.0.0'
+$head = ' V1.1.0.1'
 
 FileInstall('MultiMonitorTool.exe', @TempDir & '\', $FC_OVERWRITE)
 FileInstall('.\LngFiles\FRENCH.XML', @TempDir & '\', $FC_OVERWRITE + $FC_CREATEPATH)
@@ -48,7 +48,7 @@ If @error Then
 EndIf
 
 ; fr= 100c en = 0409
-_MultiLang_LoadLangFile(@MUILang)
+_MultiLang_LoadLangFile(@MUILang) ;@MUILang
 If @error Then
 	MsgBox(16, 'Error', 'Error: cannot opening language files' & @CRLF & 'Default language will be loaded')
 EndIf
