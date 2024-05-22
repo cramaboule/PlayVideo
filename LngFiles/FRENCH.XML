@@ -1,0 +1,8 @@
+<Head>Play vidéo</Head>
+<ButtonO>Ouvrir le fichier vidéo</ButtonO>
+<ButtonP>Jouer la video</ButtonP>
+<Group1>Choississez l'écran</Group1>
+<MainScreen> (Ecran principal)</MainScreen>
+<Combo>1. Ecran principal</Combo>
+<VLCNotThere>VLC n'est pas installé sur ce PC, Veuilliez (ré-)installer vlc: www.videolan.org</VLCNotThere>
+<Error>Erreur</Error>
