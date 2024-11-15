@@ -1,6 +1,7 @@
 <Head>Play video</Head>
-<ButtonO>Open video file</ButtonO>
-<ButtonP>Play video</ButtonP>
+<ButtonO>Open file</ButtonO>
+<ButtonP>Play</ButtonP>
+<ButtonS>Stop</ButtonS>
 <Group1>Choose the screen</Group1>
 <MainScreen> (Main screen)</MainScreen>
 <Combo>1. Main screen</Combo>

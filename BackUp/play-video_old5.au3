@@ -11,7 +11,7 @@
 #Au3Stripper_Parameters=/mo
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #Region    ;Timestamp =====================
-#    Last complie at : 2024/11/15 13:59:16
+#    Last complie at : 2024/11/15 13:57:15
 #EndRegion ;Timestamp =====================
 
 #cs ----------------------------------------------------------------------------
@@ -59,16 +59,22 @@ If @error Then
 	MsgBox(16, 'Error', 'Error: cannot opening language files' & @CRLF & 'Default language will be loaded')
 EndIf
 
+
+;~ $ButtonO = GUICtrlCreateButton(_MultiLang_GetText('ButtonO', 0, 'Open video file'), 5, 5, 135, 25)
+;~ $ButtonP = GUICtrlCreateButton(_MultiLang_GetText('ButtonP', 0, 'Play video'), 155, 5, 135, 25)
+;~ $Label = GUICtrlCreateLabel("", 5, 95, 290, 35)
+;~ $Group1 = GUICtrlCreateGroup(' ' & _MultiLang_GetText('Group1', 0, 'Choose the screen') & ' ', 5, 35, 285, 50)
 #Region ### START Koda GUI section ### Form=
 GUICreate(_MultiLang_GetText('Head', 1, 'Play video') & $head, 300, 130)
 $ButtonO = GUICtrlCreateButton(_MultiLang_GetText('ButtonO', 0, 'Open video file'), 5, 5, 90, 25)
 $ButtonP = GUICtrlCreateButton(_MultiLang_GetText('ButtonP', 0, 'Play video'), 105, 5, 90, 25)
 $ButtonS = GUICtrlCreateButton(_MultiLang_GetText('ButtonS', 0, 'Stop video'), 205, 5, 90, 25)
 $Label = GUICtrlCreateLabel("", 5, 95, 290, 35)
-$Group1 = GUICtrlCreateGroup(' ' & _MultiLang_GetText('Group1', 0, 'Choose the screen') & ' ', 5, 35, 290, 50)
+$Group1 = GUICtrlCreateGroup(' ' & _MultiLang_GetText('Group1', 0, 'Choose the screen' & ' '), 5, 35, 290, 50)
+
+
 GUISetState(@SW_SHOW)
 #EndRegion ### END Koda GUI section ###
-
 #Region Detect Monitor
 Local $iPID = RunWait(@ComSpec & ' /c ' & @TempDir & '\MultiMonitorTool.exe /stab ' & @TempDir & '\MultiMonitorTool.txt', @SystemDir, @SW_HIDE)
 _FileReadToArray(@TempDir & '\MultiMonitorTool.txt', $atextMon, Default, Chr(9))
