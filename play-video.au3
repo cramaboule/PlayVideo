@@ -35,6 +35,7 @@
 #include <GUIConstantsEx.au3>
 #include <ComboConstants.au3>
 #include <FileConstants.au3>
+#include <StaticConstants.au3>
 #include <Array.au3>
 #include <File.au3>
 #include 'MultiLang.au3'
@@ -60,12 +61,12 @@ If @error Then
 EndIf
 
 #Region ### START Koda GUI section ### Form=
-GUICreate(_MultiLang_GetText('Head', 1, 'Play video') & $head, 300, 130)
+GUICreate(_MultiLang_GetText('Head', 1, 'Play video') & $head, 300, 135)
 $ButtonO = GUICtrlCreateButton(_MultiLang_GetText('ButtonO', 0, 'Open video file'), 5, 5, 90, 25)
 $ButtonP = GUICtrlCreateButton(_MultiLang_GetText('ButtonP', 0, 'Play video'), 105, 5, 90, 25)
 $ButtonS = GUICtrlCreateButton(_MultiLang_GetText('ButtonS', 0, 'Stop video'), 205, 5, 90, 25)
-$Label = GUICtrlCreateLabel("", 5, 95, 290, 35)
 $Group1 = GUICtrlCreateGroup(' ' & _MultiLang_GetText('Group1', 0, 'Choose the screen') & ' ', 5, 35, 290, 50)
+$Label = GUICtrlCreateLabel("", 5, 85, 290, 45, $SS_LEFT)
 GUISetState(@SW_SHOW)
 #EndRegion ### END Koda GUI section ###
 
